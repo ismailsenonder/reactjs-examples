@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>ReactJS 02 - Elements, styling and variables using JSX</title>
+    <script src="https://unpkg.com/react@16.7.0/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16.7.0/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js"></script>
+    <style>
+        #cityh1 {
+            color: green;
+        }
+
+        .cityClass {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="example"></div>
+    <script type="text/babel">
+        let city = "Budapest";
+
+        ReactDOM.render(
+            <h1 id="cityh1" className="cityClass">Hello {city}</h1>,
+            document.getElementById("example")
+        );
+    </script>
+</body>
+
+</html>

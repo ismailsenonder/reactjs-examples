@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>ReactJS 11 - Object Lists</title>
+    <script src="https://unpkg.com/react@16.7.0/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16.7.0/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js"></script>
+</head>
+
+<body>
+    <div id="example"></div>
+    <script type="text/babel">
+
+        const customerList = [
+            { id: 1, name: "Company 1", orders: 30 },
+            { id: 2, name: "Company 2", orders: 40 },
+            { id: 3, name: "Company 3", orders: 50 }
+        ];
+
+
+        const App = ({ customers }) =>
+
+            <ul>
+                {customers.map(customer =>
+                    <li key={customer.id}>{customer.name} ordered {customer.orders} item(s)</li>
+                )}
+            </ul>
+
+        ReactDOM.render(
+            <App customers={customerList} />,
+            document.getElementById("example")
+        );
+    </script>
+</body>
+
+</html>

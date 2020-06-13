@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>ReactJS 09 - Conditional Render</title>
+    <script src="https://unpkg.com/react@16.7.0/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16.7.0/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js"></script>
+</head>
+
+<body>
+    <div id="example"></div>
+    <script type="text/babel">
+
+        const Student = ({ name }) =>
+            <h1>{name} is a student.</h1>
+        const Graduated = ({ name }) =>
+            <h1>{name} is graduated!</h1>
+
+        const App = ({ diploma }) =>
+            <div>
+                {diploma ? <Graduated name="Ismail" /> : <Student name="Ismail" />}
+            </div>
+
+        ReactDOM.render(
+            <App diploma={false} />,
+            document.getElementById("example")
+        );
+    </script>
+</body>
+
+</html>

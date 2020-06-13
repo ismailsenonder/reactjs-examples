@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>ReactJS 05 - Composing Components</title>
+    <script src="https://unpkg.com/react@16.7.0/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16.7.0/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js"></script>
+</head>
+
+<body>
+    <div id="example"></div>
+    <script type="text/babel">
+
+        const Person = ({ name }) => <h1>{name}</h1>
+
+        const App = () => (
+            <div>
+                <Person name="Tic" />
+                <Person name="Tac" />
+                <Person name="Toe" />
+            </div>
+        );
+
+        ReactDOM.render(
+            <App />,
+            document.getElementById("example")
+        );
+    </script>
+</body>
+
+</html>

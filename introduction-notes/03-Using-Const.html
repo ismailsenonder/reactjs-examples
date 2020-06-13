@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>ReactJS 03 - Using Const</title>
+    <script src="https://unpkg.com/react@16.7.0/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16.7.0/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js"></script>
+    <style>
+        .hellodiv {
+            color: navy;
+        }
+    </style>
+</head>
+
+<body>
+    <!--The const name have to start with uppercase letter. -->
+
+    <div id="example"></div>
+
+    <script type="text/babel">
+        const Hello = () =>
+            <div className="hellodiv">
+                <h1>Welcome my friend</h1>
+            </div>
+
+        ReactDOM.render(
+            <Hello />,
+            document.getElementById("example")
+        );
+    </script>
+
+    <br><br>
+
+    <!-- you can use paranthesis -->
+    <div id="example2"></div>
+
+    <script type="text/babel">
+        const Hello2 = () => (
+            <div className="hellodiv">
+                <h1>Welcome my friend</h1>
+            </div>
+        );
+
+        ReactDOM.render(
+            <Hello2 />,
+            document.getElementById("example2")
+        );
+    </script>
+
+    <br><br>
+
+    <!-- you can use curly brackets -->
+    <div id="example3"></div>
+
+    <script type="text/babel">
+        const Hello3 = () => (
+            <div className="hellodiv">
+                <h1>Welcome my friend</h1>
+            </div>
+        );
+
+        ReactDOM.render(
+            <Hello3 />,
+            document.getElementById("example3")
+        );
+    </script>
+</body>
+
+</html>

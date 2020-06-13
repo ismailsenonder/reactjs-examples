@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>ReactJS 04 - Using Props</title>
+    <script src="https://unpkg.com/react@16.7.0/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16.7.0/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js"></script>
+    <style>
+        .hellodiv {
+            color: navy;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="example"></div>
+    <script type="text/babel">
+
+        const Hello = (props) => {
+            console.log(props)
+            return (
+                <div className="hellodiv">
+                    <h1>Welcome {props.name}</h1>
+                    <p>{props.message}</p>
+                </div>
+            )
+        };
+
+        ReactDOM.render(
+            <Hello name="Ismail" message="this is a message!" />,
+            document.getElementById("example")
+        );
+    </script>
+
+    <br><br>
+
+    <!-- Or you can use variable names instead of props keyword -->
+
+    <div id="example2"></div>
+    <script type="text/babel">
+
+        const Hello2 = ({ name, message }) => {
+            return (
+                <div className="hellodiv">
+                    <h1>Welcome {name}</h1>
+                    <p>{message}</p>
+                </div>
+            )
+        };
+
+        ReactDOM.render(
+            <Hello2 name="Ismail2" message="this is a message 2!" />,
+            document.getElementById("example2")
+        );
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>ReactJS 08 - Events</title>
+    <script src="https://unpkg.com/react@16.7.0/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16.7.0/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js"></script>
+</head>
+
+<body>
+    <!-- button onclick does not work here like it does in classic html. it's case sensitive. -->
+    <div id="example"></div>
+    <script type="text/babel">
+
+        class App extends React.Component {
+            state = {
+                loggedIn: false
+            }
+            logIn = () => this.setState({ loggedIn: true })
+            logOut = () => this.setState({ loggedIn: false })
+            render() {
+                return (
+                    <div>
+
+                        <button onClick={this.logIn}>Log In</button><button onClick={this.logOut}>Log Out</button>
+                        <div>The user is {this.state.loggedIn ? "logged in" : "not logged in"}</div>
+
+                    </div>
+                )
+            }
+        }
+
+        ReactDOM.render(
+            <App />,
+            document.getElementById("example")
+        );
+    </script>
+</body>
+
+</html>
